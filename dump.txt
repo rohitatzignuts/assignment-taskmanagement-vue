@@ -1,0 +1,30 @@
+  function editTask(task) {
+    // Assign task to editedTask for editing
+    editingTask.value = task;
+    editedTask.value = { ...task };
+  }
+
+  function saveEditedTask() {
+    const index = tasks.value.findIndex(t => t === editingTask.value);
+    if (index !== -1) {
+      tasks.value.splice(index, 1, editedTask.value);
+      updateLocalStorage();
+      // Reset editingTask and editedTask after saving
+      editingTask.value = null;
+      editedTask.value = { title: '', description: '', dueDate: '', isDone: false };
+    }
+  }
+
+  <div v-if="editingTask" class="modal">
+      <div class="modal-content">
+        <h4>Edit Task</h4>
+        <form @submit.prevent="saveEditedTask">
+          <input v-model="editedTask.title" type="text" placeholder="Task Title">
+          <input v-model="editedTask.dueDate" type="date">
+          <textarea v-model="editedTask.description" placeholder="Task Description"></textarea>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    
+    <a href="#" class="card-link" @click="editTask(task)">Edit</a> <!-- Add this line -->
