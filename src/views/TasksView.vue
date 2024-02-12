@@ -1,6 +1,5 @@
 <script setup>
 
-  import Navbar from "@/components/Navbar.vue"
   import { ref, onMounted } from 'vue';
   import Swal from "sweetalert2";
   const tasks = ref([])
@@ -35,9 +34,11 @@
 </script>
 
 <template>
-  <Navbar></Navbar>
   <section class="container">
-      <div class="row my-5 gap-4">
+      <div class="noTasks mt-5 text-center" v-show="!tasks.length">
+        <p>No Tasks For Now....</p>
+      </div>
+      <div class="row my-5 gap-4" v-show="tasks.length">
         <!-- list on in progress task -->
         <div id="inProgress" class="col">
           <h4 class="mb-4">In Progress</h4>

@@ -1,8 +1,6 @@
 <script setup>
-import Navbar from "@/components/Navbar.vue"
 import router from "@/router";
 import { ref } from 'vue'
-import { useRouter } from 'vue-router';
 import Swal from "sweetalert2";
 
     let task = ref({
@@ -30,7 +28,6 @@ import Swal from "sweetalert2";
 </script>
 
 <template>
-    <Navbar></Navbar>
     <div class="tasks d-flex justify-content-center align-items-center">
         <div class="form w-100 w-md-75 w-lg-50">
             <form class="d-flex flex-column gap-3" method="POST" @submit.prevent="submitTask">
