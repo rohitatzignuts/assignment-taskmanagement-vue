@@ -4,6 +4,7 @@ import { ref } from 'vue'
 import Swal from "sweetalert2";
 
     let task = ref({
+        id : randomId(),
         title : '',
         description : '',
         dueDate : '', 
@@ -25,6 +26,9 @@ import Swal from "sweetalert2";
         router.push('/tasks')
     }
 
+    function randomId(){
+        return Math.floor(Math.random()*1000000)
+    }
 </script>
 
 <template>
