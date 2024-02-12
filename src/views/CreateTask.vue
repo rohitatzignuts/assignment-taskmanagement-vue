@@ -17,7 +17,7 @@ import Swal from "sweetalert2";
         tasks = [];
         }   
         tasks.push(task.value);
-        localStorage.setItem('tasks', JSON.stringify(tasks)); // Corrected: 'tasks' to tasks
+        localStorage.setItem('tasks', JSON.stringify(tasks)); 
         Swal.fire({
             title: "Task Created!",
             icon: "success"
@@ -62,7 +62,7 @@ import Swal from "sweetalert2";
     height: calc(100vh - 56px); 
 }
 .form {
-  max-width: 500px; /* Limit form width */
-  margin: auto; /* Center form horizontally */
+  max-width: 500px; 
+  margin: auto; 
 }
 </style>   

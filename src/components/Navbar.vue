@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-5"> <!-- Add ms-auto class here -->
+                <ul class="navbar-nav ms-auto gap-5"> 
                     <RouterLink to="/" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</RouterLink>
                     <RouterLink to="/tasks" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Tasks</RouterLink>
                     <RouterLink to="/tasks/create" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Create</RouterLink>
